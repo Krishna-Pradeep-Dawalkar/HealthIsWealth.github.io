@@ -115,7 +115,7 @@ submit.addEventListener("click", () => {
              <h4> You're mentally unhealhty! Take care and please do talk with our 'Online Buddy' .</h4>
              <button class="btn" onclick ="location.reload()"><u> Do Survey again</u></button>
              <button class="btn">
-             <a href="/chatbot/ch.html">Talk with our 'Online Buddy'</a>
+             <a href="./chatbot/ch.html">Talk with our 'Online Buddy'</a>
              </button>
         </div>`;
             showsurvey.classList.remove("survey");
