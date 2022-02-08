@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Buddy</title>
+<link rel="icon" href="favcon.png" type="image/png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/chatbot/style.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+
+<!-- ChatBot -->
+<link rel="stylesheet" type="text/css" href="css/jquery.convform.css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.convform.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+</head>
+<body>
+<!-- ChatBot -->
+<div class="chat_icon">
+	<i class="fa fa-comments" aria-hidden="true"></i>
+</div>
+
+<div class="chat_box">
+	<div class="my-conv-form-wrapper">
+		<form action="" method="GET" class="hidden">
+
+      <select data-conv-question="Hello! How can I help you" name="category">
+        <option value="Problem1">I am so alone</option>
+        <option value="Problem2">I am feeling low</option>
+      </select>
+
+      <div data-conv-fork="category">
+        <div data-conv-case="problem1">
+          <input type="text" name="domainName" data-conv-question="what is the reason?">    
+        </div>
+        <div data-conv-case="problem2" data-conv-fork="first-question2">
+          <input type="text" name="companyName" data-conv-question=""> 
+        </div>
+      </div>
+      <select data-conv-question="what kind of issue you have" name="category">
+        <option value="problem1">family issue</option>
+        <option value="problem2">relationship issue</option>
+        <option value="problem3">Career issue</option>
+      </select>
+      <div data-conv-fork="category">
+        <div data-conv-case="problem">
+          <input type="text" name="domainName" data-conv-question="Hey hey dont worry every one in this world faces problem like these....">    
+        </div>
+        <div data-conv-case="sol" data-conv-fork="first-question2">
+          <input type="text" name="companyName" data-conv-question=""> 
+        </div>
+      </div>
+
+      <div data-conv-fork="category">
+        <div data-conv-case="problem">
+          <input type="text" name="domainName" data-conv-question="You just need to focus on youself and what is good beside you!">    
+        </div>
+        <div data-conv-case="problem" data-conv-fork="first-question2">
+          <input type="text" name="companyName" data-conv-question=""> 
+        </div>
+      </div>
+
+      <select data-conv-question="Is there something else bothering you?" name="category">
+        <option value="option1">Yes</option>
+        <option value="option2">No</option>
+        
+      </select>
+
+      <div data-conv-fork="category">
+        <div data-conv-case="solution">
+          <input type="text" name="domainName" data-conv-question="You are beautiful............ just smile EVERYDAY">    
+        </div>
+        <div data-conv-case="problem" data-conv-fork="first-question2">
+          <input type="text" name="companyName" data-conv-question=""> 
+        </div>
+      </div>
+
+
+      <div data-conv-fork="category">
+        <div data-conv-case="solution">
+          <input type="text" name="domainName" data-conv-question="If you have more problems or anything else fill our you name and email we will talk to you">    
+        </div>
+        <div data-conv-case="problem" data-conv-fork="first-question2">
+          <input type="text" name="companyName" data-conv-question=""> 
+        </div>
+      </div>
+
+
+
+      <input type="text" name="name" data-conv-question="Please, Enter your name we will contact you ">
+
+      <input type="text" data-conv-question="Hi {name}, <br> It's a pleasure to meet you." data-no-answer="true">
+
+      <input data-conv-question="Enter your e-mail" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="email" name="email" required placeholder="What's your e-mail?">
+
+      <select data-conv-question="Please Confirm">
+        <option value="Yes">Confirm</option>
+      </select>
+
+  	</form>
+	</div>
+</div>
+<!-- ChatBot end -->
+
+
+
+</body>
+</html>
